@@ -1,0 +1,30 @@
+.nav {
+    min-height: 3rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-right: 3rem;
+    color: white;
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.firstHeader {
+    font-size: 1.5rem;
+}
+
+.active {
+    color: red;
+}
