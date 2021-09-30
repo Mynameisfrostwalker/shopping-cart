@@ -2,6 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../css/mainHome.module.css";
 
+/**
+ * @module MainHome
+ */
+
+/**
+ * MainHome Component
+ * @return {JSX}
+ */
 const MainHome = () => (
   <main className={styles.main}>
     <div className={styles.center}>
