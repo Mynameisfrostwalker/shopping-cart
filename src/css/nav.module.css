@@ -25,6 +25,24 @@
     font-size: 1.5rem;
 }
 
+.inactive {
+    color: white;
+}
+
 .active {
     color: red;
+}
+
+.cartDiv {
+    position: relative;
+}
+
+.counter {
+    border-radius: 50px;
+    background-color: blue;
+    position: absolute;
+    top: -50%;
+    right: -25%;
+    font-size: 1rem;
+    padding: 3px;
 }
