@@ -1,0 +1,27 @@
+.card {
+    margin: 1rem;
+    width: 9rem;
+    height: max-content;
+    box-shadow: 0px 0px 3px 3px black;
+    padding: 1rem;
+    box-sizing: content-box;
+}
+
+.card * {
+    text-align: center;
+}
+
+.img {
+    width: 9rem;
+    height: 10rem
+}
+
+.input, .input input {
+    width: inherit;
+}
+
+.input button {
+    margin-top: 3px;
+    width: inherit;
+
+}
