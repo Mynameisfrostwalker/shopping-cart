@@ -11,6 +11,11 @@ import "./css/reset.css";
 import "./css/index.css";
 import App from "./App";
 
+/**
+ * @fileoverview Index.js is the root file for this project
+ * @author Frostwalker
+ */
+
 library.add(fab, faShoppingCart, faHome, faShoppingBasket);
 
 ReactDOM.render(
