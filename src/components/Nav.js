@@ -42,7 +42,9 @@ const Nav = ({ length }) => (
       >
         <div className={navStyles.cartDiv}>
           <FontAwesomeIcon icon="shopping-cart" />
-          <div className={navStyles.counter}>{length}</div>
+          {length > 0 ? (
+            <div className={navStyles.counter}>{length}</div>
+          ) : null}
         </div>
       </NavLink>
     </div>
