@@ -25,7 +25,7 @@ const App = () => {
       const newArr = products.map((product) => {
         const obj = { ...product };
         if (obj.name === data) {
-          obj.value = e.target.value;
+          obj.value = parseInt(e.target.value, 10);
         }
         return obj;
       });
@@ -34,7 +34,7 @@ const App = () => {
     }
   };
 
-  const handleClick = (e) => {
+  const handleAdd = (e) => {
     const data = e.target.getAttribute("data-key");
     const newArr = products.map((product) => {
       const obj = { ...product };
@@ -44,6 +44,28 @@ const App = () => {
       }
       return obj;
     });
+
+    setProducts(newArr);
+  };
+
+  const handleRemove = (e) => {
+    const data = e.target.getAttribute("data-key");
+    const newCart = [...cart];
+    const newArr = products.map((product) => {
+      const obj = { ...product };
+      if (obj.name === data) {
+        obj.added = false;
+      }
+      return obj;
+    });
+
+    for (let i = 0; i < newCart.length; i += 1) {
+      if (newCart[i].name === data) {
+        newCart.splice(i, 1);
+      }
+    }
+
+    setCart(newCart);
 
     setProducts(newArr);
   };
@@ -58,12 +80,12 @@ const App = () => {
           <Shop
             products={products}
             handleChange={handleChange}
-            handleClick={handleClick}
+            handleClick={handleAdd}
             length={cart.length}
           />
         </Route>
         <Route exact path="/cart">
-          <Cart length={cart.length} />
+          <Cart length={cart.length} cart={cart} handleChange={handleRemove} />
         </Route>
       </Switch>
     </Router>
